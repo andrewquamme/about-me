@@ -31,7 +31,7 @@ if (answerTwo === 'YES' || answerTwo === 'Y') {
   alert('Correct!. I operated tactical voice and data networks in the Army for six years.');
   console.log('Question one was answered correcty');
 } else {
-  alert('Oops, sorry. I enlisted into the Army in 2000.');
+  alert('Sorry, ' + username + '. I enlisted into the Army in 2000.');
   console.log('Question one was answered incorrectly');
 }
 
@@ -44,14 +44,23 @@ if (answerThree === 'YES' || answerThree === 'Y') {
   alert('Nice work! I spent two years over there.');
   console.log('Question one was answered correcty');
 } else {
-  alert('Unfortunately, I was there for two years (04-05 and again from 05-06).');
+  alert('Unfortunately, ' + username + ', I was there for two years (04-05 and again from 05-06).');
   console.log('Question one was answered incorrectly');
 }
 
 /* Question Four
-Q:
+Q: 
 A: */
 
 /* Question Five
-Q:
-A: */
+Q: Have I cycled from Seattle to Portland?
+A: Yes, twice for some reason */
+var answerFive = prompt('Have I cycled from Seattle to Portland?').toUpperCase();
+console.log(answerFive);
+if (answerFive === 'YES' || answerFive === 'Y') {
+  alert('Nice job, ' + username + '! Over 200 miles!');
+  console.log('Question one was answered correcty');
+} else {
+  alert('Wrong, ' + username + ', I have. I even did it again the next year for some reason!');
+  console.log('Question one was answered incorrectly');
+}

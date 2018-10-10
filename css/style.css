@@ -1,6 +1,7 @@
 body {
   background: rgb(146, 142, 142);  
   padding: 20px;
+  width: 800px;
 }
 
 #page {
@@ -8,6 +9,7 @@ body {
   background: moccasin;
   color: maroon;  
   padding: 10px;
+  margin: auto;
 }
 
 header {
@@ -22,8 +24,8 @@ article {
   padding: 10px;
 }
 
-article.p {
-  padding: 5px;
+p {
+  margin: 10px;
 }
 
 h1 {
@@ -37,6 +39,9 @@ h2 {
 }
 
 ul {
-  list-style-type: square;
-  padding: 5 px;
+  list-style-type: circle;
+}
+
+li {
+  margin: 5px;
 }

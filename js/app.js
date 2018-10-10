@@ -74,3 +74,34 @@ if (username !== null) {
     console.log('Question one was answered incorrectly');
   }
 }
+
+/* Question Six
+Random number guessing game */
+var numToGuess = Math.floor(Math.random() * 10) + 1;
+console.log('Number to guess: ' + numToGuess);
+var numTries = 0;
+
+do {
+  var guessedNum = Number(prompt('Guess a number between 1 and 10'));
+  console.log('User guessed: ' + guessedNum);
+
+  numTries ++;
+  console.log('Tries: ' + numTries);
+
+  if (guessedNum < numToGuess) {
+    alert('Too low!');
+    console.log('Too Low');
+  } else if (guessedNum > numToGuess) {
+    alert('Too high!');
+    console.log('Too High');
+  } else {
+    alert(numToGuess + '! You got it!');
+    console.log('You Got It!');
+    break;
+  }
+
+  if (numTries === 4) {
+    alert('Sorry! You\'ve tried too many times :( The number was: ' + numToGuess);
+  }
+
+} while (guessedNum !== numToGuess && numTries < 4);

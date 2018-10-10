@@ -1,24 +1,23 @@
 'use strict'
 
-alert('Welcome! Let\'s play a guessing game so you can learn more about me.');
+alert('Welcome! Let\'s play a little guessing game so you can learn more about me.');
 
 // Get user's name and greet them
 
-var username = prompt('What is your name?');
+var username = prompt('My name is Andrew, what\'s yours?');
 console.log('Username is: ' + username);
-alert('Welcome, ' + username + '! Let\'s get started!');
+alert('Hi ' + username + '! Let\'s get started!');
 
 /* Question One
 Q: Did I grow up in Washington?
 A: No (I grew up in Wisconsin) */
-
 var answerOne = prompt('Did I grow up in Washington?').toUpperCase();
 console.log(answerOne);
 if (answerOne === 'YES' || answerOne === 'Y') {
-  alert('Oops, sorry. I was born and raised in Wisconsin!');
+  alert('Nope! While I have lived here since 2002, I was born and raised in Wisconsin! Go Pack Go!');
   console.log('Question one was answered incorrecty');
 } else {
-  alert('Correct! I was born and raised in Wisconsin!');
+  alert('Correct! I was born and raised in Wisconsin! Go Pack Go!');
   console.log('Question one was answered correctly');
 }
 
@@ -28,10 +27,10 @@ A: Yes (I enlisted into the Army) */
 var answerTwo = prompt('Was I in the military?').toUpperCase();
 console.log(answerTwo);
 if (answerTwo === 'YES' || answerTwo === 'Y') {
-  alert('Correct!. I operated tactical voice and data networks in the Army for six years.');
+  alert('Correct! I operated tactical voice and data networks in the Army for six years.');
   console.log('Question one was answered correcty');
 } else {
-  alert('Sorry, ' + username + '. I enlisted into the Army in 2000.');
+  alert('Incorrect, ' + username + '. I enlisted into the Army in 2000.');
   console.log('Question one was answered incorrectly');
 }
 
@@ -49,8 +48,17 @@ if (answerThree === 'YES' || answerThree === 'Y') {
 }
 
 /* Question Four
-Q: 
-A: */
+Q: Is my favorite food chopped liver?
+A: NO.*/
+var answerFour = prompt('Is my favorite food chopper liver?').toUpperCase();
+console.log(answerFour);
+if (answerFour === 'YES' || answerFour === 'Y') {
+  alert('Come on, ' + username + '... Who likes chopped liver?');
+  console.log('Question one was answered incorrecty');
+} else {
+  alert('100% correct, ' + username + '. I do not like it at all!');
+  console.log('Question one was answered correctly');
+}
 
 /* Question Five
 Q: Have I cycled from Seattle to Portland?
@@ -61,6 +69,6 @@ if (answerFive === 'YES' || answerFive === 'Y') {
   alert('Nice job, ' + username + '! Over 200 miles!');
   console.log('Question one was answered correcty');
 } else {
-  alert('Wrong, ' + username + ', I have. I even did it again the next year for some reason!');
+  alert('Oh ye of little faith ' + username + '! I have! (I even did it again the next year for some reason...)');
   console.log('Question one was answered incorrectly');
 }

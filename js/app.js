@@ -105,3 +105,33 @@ do {
   }
 
 } while (guessedNum !== numToGuess && numTries < 4);
+
+/* Question 7
+Guess which other states I've lived in */
+
+alert('I have lived in a few different states besides Washington. See if you can guess another state I\'ve lived in!')
+var listOfStates = ['Wisconsin', 'South Carolina', 'Georgia'];
+var stateInArray = false;
+var triesRemaining = 6;
+
+do {
+
+  var guessedState = prompt('Enter a state. You have ' + triesRemaining + ' tries remaining.');
+  console.log(guessedState);
+
+  for (var i = 0; i < listOfStates.length; i++) {
+
+    if (listOfStates[i].toLowerCase() === guessedState.toLowerCase()) {
+      stateInArray = true;
+      alert('Nice work! I have lived in ' + listOfStates);
+      break;
+    }
+  }
+
+  if (!stateInArray) {
+    alert('Nope, haven\'t lived there!');
+    triesRemaining --;
+    console.log(triesRemaining);
+  }
+
+} while (!stateInArray && triesRemaining > 0);

@@ -1,5 +1,7 @@
 'use strict'
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 function questionOne() {
   /* Question One
   ++++++++++++++++++++
@@ -141,7 +143,7 @@ function questionSeven() {
     for (var i = 0; i < arrayOfStates.length; i++) {
       if (arrayOfStates[i].toUpperCase() === guessedState.toUpperCase()) {
         stateInArray = true;
-        alert('Nice work, ' + username + '! I have lived in ' + arrayOfStates);
+        alert('Nice work, ' + username + '! I have lived in ' + arrayOfStates + '.');
         console.log('Question seven was answered correctly');
         score++;
         break;
@@ -150,9 +152,13 @@ function questionSeven() {
     if (!stateInArray) {
       alert('Nope, haven\'t lived there!');
       triesRemaining--;
+      if (triesRemaining === 0) {
+        alert('Sorry ' + username + ', you ran out of tries. I have lived in ' + arrayOfStates + '.');
+      }
     }
   } while (!stateInArray && triesRemaining > 0);
 }
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Greet the unknown user and ask for their name

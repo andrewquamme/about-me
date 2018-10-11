@@ -20,7 +20,7 @@ if (username !== null) {
   alert('Hi ' + username + '! Let\'s get started!');
 
   /* Question One
-
+  ====================
   Q: Was I born in a barn?
   A: No (I was born in a hospital) */
 
@@ -36,7 +36,7 @@ if (username !== null) {
   }
 
   /* Question Two
-
+  ====================
   Q: Was I in the military?
   A: Yes (I enlisted into the Army) */
 
@@ -52,7 +52,7 @@ if (username !== null) {
   }
 
   /* Question Three
-
+  ====================
   Q: Have I been to Iraq?
   A: Yes (2004-2005 and 2005-2006) */
 
@@ -68,7 +68,7 @@ if (username !== null) {
   }
 
   /* Question Four
-
+  ====================
   Q: Is my favorite food chopped liver?
   A: NO.*/
 
@@ -84,7 +84,7 @@ if (username !== null) {
   }
 
   /* Question Five
-
+  ====================
   Q: Have I cycled from Seattle to Portland?
   A: Yes, twice for some reason */
 
@@ -100,7 +100,7 @@ if (username !== null) {
   }
 
   /* Question Six
-
+  ====================
   Random number guessing game
   Script chooses a number between 1 and 10 and user gets 4 attempts to guess */
 
@@ -132,7 +132,7 @@ if (username !== null) {
   } while (guessedNum !== numToGuess && numTries < 4);
 
   /* Question 7
-
+  ====================
   Guess which other states I've lived in
   User enters states as a guess and that entry is compared to values in an array */
 

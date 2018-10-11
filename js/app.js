@@ -73,65 +73,67 @@ if (username !== null) {
     alert('Oh ye of little faith ' + username + '! I have! (I even did it again the next year for some reason...)');
     console.log('Question one was answered incorrectly');
   }
-}
 
-/* Question Six
-Random number guessing game */
-var numToGuess = Math.floor(Math.random() * 10) + 1;
-console.log('Number to guess: ' + numToGuess);
-var numTries = 0;
+  /* Question Six
+  Random number guessing game */
+  var numToGuess = Math.floor(Math.random() * 10) + 1;
+  console.log('Number to guess: ' + numToGuess);
+  var numTries = 0;
 
-do {
-  var guessedNum = Number(prompt('Guess a number between 1 and 10'));
-  console.log('User guessed: ' + guessedNum);
+  do {
+    var guessedNum = Number(prompt('Now for a different kind of game... Guess a number between 1 and 10'));
+    console.log('User guessed: ' + guessedNum);
 
-  numTries ++;
-  console.log('Tries: ' + numTries);
+    numTries ++;
+    console.log('Tries: ' + numTries);
 
-  if (guessedNum < numToGuess) {
-    alert('Too low!');
-    console.log('Too Low');
-  } else if (guessedNum > numToGuess) {
-    alert('Too high!');
-    console.log('Too High');
-  } else {
-    alert(numToGuess + '! You got it!');
-    console.log('You Got It!');
-    break;
-  }
-
-  if (numTries === 4) {
-    alert('Sorry! You\'ve tried too many times :( The number was: ' + numToGuess);
-  }
-
-} while (guessedNum !== numToGuess && numTries < 4);
-
-/* Question 7
-Guess which other states I've lived in */
-
-alert('I have lived in a few different states besides Washington. See if you can guess another state I\'ve lived in!')
-var listOfStates = ['Wisconsin', 'South Carolina', 'Georgia'];
-var stateInArray = false;
-var triesRemaining = 6;
-
-do {
-
-  var guessedState = prompt('Enter a state. You have ' + triesRemaining + ' tries remaining.');
-  console.log(guessedState);
-
-  for (var i = 0; i < listOfStates.length; i++) {
-
-    if (listOfStates[i].toLowerCase() === guessedState.toLowerCase()) {
-      stateInArray = true;
-      alert('Nice work! I have lived in ' + listOfStates);
+    if (guessedNum < numToGuess) {
+      alert('Too low!');
+      console.log('Too Low');
+    } else if (guessedNum > numToGuess) {
+      alert('Too high!');
+      console.log('Too High');
+    } else {
+      alert(numToGuess + '! You got it!');
+      console.log('You Got It!');
       break;
     }
-  }
 
-  if (!stateInArray) {
-    alert('Nope, haven\'t lived there!');
-    triesRemaining --;
-    console.log(triesRemaining);
-  }
+    if (numTries === 4) {
+      alert('Sorry! You\'ve tried too many times :( The number was: ' + numToGuess);
+    }
 
-} while (!stateInArray && triesRemaining > 0);
+  } while (guessedNum !== numToGuess && numTries < 4);
+
+  /* Question 7
+  Guess which other states I've lived in */
+
+  alert('I have lived in a few different states besides Washington. See if you can guess another state I\'ve lived in!')
+  var listOfStates = ['Wisconsin', 'South Carolina', 'Georgia'];
+  var stateInArray = false;
+  var triesRemaining = 6;
+
+  do {
+
+    var guessedState = prompt('Enter a state. You have ' + triesRemaining + ' tries remaining.');
+    console.log(guessedState);
+
+    for (var i = 0; i < listOfStates.length; i++) {
+
+      if (listOfStates[i].toUpperCase() === guessedState.toUpperCase()) {
+        stateInArray = true;
+        alert('Nice work! I have lived in ' + listOfStates);
+        break;
+      }
+    }
+
+    if (!stateInArray) {
+      alert('Nope, haven\'t lived there!');
+      triesRemaining --;
+      console.log(triesRemaining);
+    }
+
+  } while (!stateInArray && triesRemaining > 0);
+
+}
+

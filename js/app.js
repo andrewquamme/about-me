@@ -112,7 +112,8 @@ function questionFive() {
 }
 questionFive();
 
-  /* Question Six
+function questionSix() { 
+   /* Question Six
   ====================
   Random number guessing game
   Script chooses a number between 1 and 10 and user gets 4 attempts to guess */
@@ -143,8 +144,11 @@ questionFive();
       console.log('User ran out of tries');
     }
   } while (guessedNum !== numToGuess && numTries < 4);
+}
+questionSix();
 
-  /* Question 7
+function questionSeven() {
+/* Question 7
   ====================
   Guess which other states I've lived in
   User enters states as a guess and that entry is compared to values in an array */
@@ -171,6 +175,8 @@ questionFive();
       triesRemaining--;
     }
   } while (!stateInArray && triesRemaining > 0);
+}
+questionSeven();
 
   /* Final Score
   ====================

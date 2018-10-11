@@ -89,8 +89,10 @@ if (username !== null) {
   console.log('Number to guess: ' + numToGuess);
   var numTries = 0;
 
+  alert('Now for a different kind of game...');
+
   do {
-    var guessedNum = Number(prompt('Now for a different kind of game... Guess a number between 1 and 10'));
+    var guessedNum = Number(prompt('Guess a number between 1 and 10'));
     console.log('User guessed: ' + guessedNum);
 
     numTries ++;

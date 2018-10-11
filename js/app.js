@@ -1,13 +1,17 @@
 'use strict'
 
+/* This entire game is enclosed in a loop to allow for a user to
+cancel the prompt games upon initial page load
+
+Questions 1-5 are simple yes or no questions */
+
 alert('Welcome! Let\'s play a little guessing game so you can learn more about me.');
 
 // Get user's name and greet them
 
 var username = prompt('My name is Andrew, what\'s yours?');
 
-/* This entire game is enclosed in a loop to allow for a user to
-cancel the prompt games upon initial page load */
+// Initialize score keeping and quit if user has hit cancel
 var score = 0;
 if (username !== null) {
   console.log('Username is: ' + username);
@@ -84,7 +88,8 @@ if (username !== null) {
   }
 
   /* Question Six
-  Random number guessing game */
+  Random number guessing game
+  Script chooses a number between 1 and 10 and user gets 4 attempts to guess */
   var numToGuess = Math.floor(Math.random() * 10) + 1;
   console.log('Number to guess: ' + numToGuess);
   var numTries = 0;
@@ -118,7 +123,8 @@ if (username !== null) {
   } while (guessedNum !== numToGuess && numTries < 4);
 
   /* Question 7
-  Guess which other states I've lived in */
+  Guess which other states I've lived in 
+  User enters states as a guess and that entry is compared to values in an array */
 
   alert('I have lived in a few different states besides Washington. See if you can guess another state I\'ve lived in!')
   var arrayOfStates = ['Wisconsin', 'South Carolina', 'Georgia'];

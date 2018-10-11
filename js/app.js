@@ -93,7 +93,8 @@ function questionFour() {
 }
 questionFour();
  
-  /* Question Five
+function questionFive() {
+   /* Question Five
   ====================
   Q: Have I cycled from Seattle to Portland?
   A: Yes, twice for some reason */
@@ -108,6 +109,8 @@ questionFour();
     alert('Oh ye of little faith ' + username + '! I have! (I even did it again the next year for some reason...)');
     console.log('Question one was answered incorrectly');
   }
+}
+questionFive();
 
   /* Question Six
   ====================

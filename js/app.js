@@ -1,23 +1,21 @@
 'use strict'
 
-/* This entire game is enclosed in a loop to allow for a user to
-cancel the prompt games upon initial page load
-
-Questions 1-5 are simple yes or no questions */
+// Greet the unknown user and ask for their name
 
 alert('Welcome! Let\'s play a little guessing game so you can learn more about me.');
-
-// Get user's name and greet them
-
 var username = prompt('My name is Andrew, what\'s yours?');
+console.log('Username is: ' + username);
 
-// Initialize score keeping and quit if user has hit cancel
-
-var score = 0;
+/* This entire game is enclosed in a loop to allow for
+a user to cancel the prompt games  */
 
 if (username !== null) {
-  console.log('Username is: ' + username);
-  alert('Hi ' + username + '! Let\'s get started!');
+
+  /*User did not hit cancel, so let the games begin!
+  Initialize score keeping and greet user by name*/
+
+  var score = 0;
+  alert('Hi ' + username + '! Let\'s get started! First, a few Y/N questions.');
 
   /* Question One
   ====================

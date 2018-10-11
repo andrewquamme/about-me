@@ -74,7 +74,8 @@ function questionThree() {
 }
 questionThree();
 
-  /* Question Four
+function questionFour() {
+   /* Question Four
   ====================
   Q: Is my favorite food chopped liver?
   A: NO.*/
@@ -89,7 +90,9 @@ questionThree();
     console.log('Question four was answered correctly');
     score++;
   }
-
+}
+questionFour();
+ 
   /* Question Five
   ====================
   Q: Have I cycled from Seattle to Portland?

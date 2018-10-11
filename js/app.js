@@ -13,26 +13,30 @@ if (username !== null) {
 
   /*User did not hit cancel, so let the games begin!
   Initialize score keeping and greet user by name*/
-
+ 
   var score = 0;
   alert('Hi ' + username + '! Let\'s get started! First, a few Y/N questions.');
 
-  /* Question One
-  ====================
-  Q: Was I born in a barn?
-  A: No (I was born in a hospital) */
+  function questionOne() {
+      /* Question One
+    ====================
+    Q: Was I born in a barn?
+    A: No (I was born in a hospital) */
 
-  var answerOne = prompt('Was I born in a barn?').toUpperCase();
-  console.log(answerOne);
-  if (answerOne === 'YES' || answerOne === 'Y') {
-    alert('Nope! While I did grow up on a farm, I was in fact born in a hospital.');
-    console.log('Question one was answered incorrecty');
-  } else {
-    alert('Correct!');
-    console.log('Question one was answered correctly');
-    score++;
+    var answerOne = prompt('Was I born in a barn?').toUpperCase();
+    console.log(answerOne);
+    if (answerOne === 'YES' || answerOne === 'Y') {
+      console.log('Question one was answered incorrecty');
+    } else {
+      alert('Correct!');
+      console.log('Question one was answered correctly');
+      score++;
+      alert('Nope! While I did grow up on a farm, I was in fact born in a hospital.');
+    }
   }
+questionOne();  
 
+function questionTwo() {
   /* Question Two
   ====================
   Q: Was I in the military?
@@ -48,7 +52,10 @@ if (username !== null) {
     alert('Incorrect, ' + username + '. I enlisted into the Army in 2000.');
     console.log('Question two was answered incorrectly');
   }
+}
+questionTwo();
 
+function questionThree() {
   /* Question Three
   ====================
   Q: Have I been to Iraq?
@@ -64,8 +71,11 @@ if (username !== null) {
     alert('Unfortunately, ' + username + ', I was there for two years (04-05 and again from 05-06).');
     console.log('Question three was answered incorrectly');
   }
+}
+questionThree();
 
-  /* Question Four
+function questionFour() {
+   /* Question Four
   ====================
   Q: Is my favorite food chopped liver?
   A: NO.*/
@@ -80,8 +90,11 @@ if (username !== null) {
     console.log('Question four was answered correctly');
     score++;
   }
-
-  /* Question Five
+}
+questionFour();
+ 
+function questionFive() {
+   /* Question Five
   ====================
   Q: Have I cycled from Seattle to Portland?
   A: Yes, twice for some reason */
@@ -96,8 +109,11 @@ if (username !== null) {
     alert('Oh ye of little faith ' + username + '! I have! (I even did it again the next year for some reason...)');
     console.log('Question one was answered incorrectly');
   }
+}
+questionFive();
 
-  /* Question Six
+function questionSix() { 
+   /* Question Six
   ====================
   Random number guessing game
   Script chooses a number between 1 and 10 and user gets 4 attempts to guess */
@@ -128,8 +144,11 @@ if (username !== null) {
       console.log('User ran out of tries');
     }
   } while (guessedNum !== numToGuess && numTries < 4);
+}
+questionSix();
 
-  /* Question 7
+function questionSeven() {
+/* Question 7
   ====================
   Guess which other states I've lived in
   User enters states as a guess and that entry is compared to values in an array */
@@ -156,6 +175,8 @@ if (username !== null) {
       triesRemaining--;
     }
   } while (!stateInArray && triesRemaining > 0);
+}
+questionSeven();
 
   /* Final Score
   ====================

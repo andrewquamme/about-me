@@ -13,26 +13,30 @@ if (username !== null) {
 
   /*User did not hit cancel, so let the games begin!
   Initialize score keeping and greet user by name*/
-
+ 
   var score = 0;
   alert('Hi ' + username + '! Let\'s get started! First, a few Y/N questions.');
 
-  /* Question One
-  ====================
-  Q: Was I born in a barn?
-  A: No (I was born in a hospital) */
+  function questionOne() {
+      /* Question One
+    ====================
+    Q: Was I born in a barn?
+    A: No (I was born in a hospital) */
 
-  var answerOne = prompt('Was I born in a barn?').toUpperCase();
-  console.log(answerOne);
-  if (answerOne === 'YES' || answerOne === 'Y') {
-    alert('Nope! While I did grow up on a farm, I was in fact born in a hospital.');
-    console.log('Question one was answered incorrecty');
-  } else {
-    alert('Correct!');
-    console.log('Question one was answered correctly');
-    score++;
+    var answerOne = prompt('Was I born in a barn?').toUpperCase();
+    console.log(answerOne);
+    if (answerOne === 'YES' || answerOne === 'Y') {
+      console.log('Question one was answered incorrecty');
+    } else {
+      alert('Correct!');
+      console.log('Question one was answered correctly');
+      score++;
+      alert('Nope! While I did grow up on a farm, I was in fact born in a hospital.');
+    }
   }
+questionOne();  
 
+function questionTwo() {
   /* Question Two
   ====================
   Q: Was I in the military?
@@ -48,7 +52,10 @@ if (username !== null) {
     alert('Incorrect, ' + username + '. I enlisted into the Army in 2000.');
     console.log('Question two was answered incorrectly');
   }
+}
+questionTwo();
 
+function questionThree() {
   /* Question Three
   ====================
   Q: Have I been to Iraq?
@@ -64,6 +71,8 @@ if (username !== null) {
     alert('Unfortunately, ' + username + ', I was there for two years (04-05 and again from 05-06).');
     console.log('Question three was answered incorrectly');
   }
+}
+questionThree();
 
   /* Question Four
   ====================

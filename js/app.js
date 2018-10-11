@@ -97,7 +97,7 @@ if (username !== null) {
       alert('Too high!');
       console.log('Too High');
     } else {
-      alert(numToGuess + '! You got it!');
+      alert(numToGuess + '! You got it ' + username + '!');
       console.log('You Got It!');
       break;
     }
@@ -125,7 +125,7 @@ if (username !== null) {
 
       if (arrayOfStates[i].toUpperCase() === guessedState.toUpperCase()) {
         stateInArray = true;
-        alert('Nice work! I have lived in ' + arrayOfStates);
+        alert('Nice work, ' + username + '! I have lived in ' + arrayOfStates);
         break;
       }
     }

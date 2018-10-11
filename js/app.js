@@ -31,8 +31,8 @@ if (username !== null) {
     console.log('Question one was answered incorrecty');
   } else {
     alert('Correct!');
-    score ++;
     console.log('Question one was answered correctly');
+    score ++;
   }
 
   /* Question Two
@@ -44,8 +44,8 @@ if (username !== null) {
   console.log(answerTwo);
   if (answerTwo === 'YES' || answerTwo === 'Y') {
     alert('Correct! I operated tactical voice and data networks in the Army for six years.');
-    score ++;
     console.log('Question one was answered correcty');
+    score ++;
   } else {
     alert('Incorrect, ' + username + '. I enlisted into the Army in 2000.');
     console.log('Question two was answered incorrectly');
@@ -60,8 +60,8 @@ if (username !== null) {
   console.log(answerThree);
   if (answerThree === 'YES' || answerThree === 'Y') {
     alert('Nice work! I spent two years over there.');
-    score ++;
     console.log('Question one was answered correcty');
+    score ++;
   } else {
     alert('Unfortunately, ' + username + ', I was there for two years (04-05 and again from 05-06).');
     console.log('Question three was answered incorrectly');
@@ -79,8 +79,8 @@ if (username !== null) {
     console.log('Question one was answered incorrecty');
   } else {
     alert('100% correct, ' + username + '. I do not like it at all!');
-    score ++;
     console.log('Question four was answered correctly');
+    score ++;
   }
 
   /* Question Five
@@ -92,8 +92,8 @@ if (username !== null) {
   console.log(answerFive);
   if (answerFive === 'YES' || answerFive === 'Y') {
     alert('Nice job, ' + username + '! Over 200 miles!');
-    score ++;
     console.log('Question five was answered correcty');
+    score ++;
   } else {
     alert('Oh ye of little faith ' + username + '! I have! (I even did it again the next year for some reason...)');
     console.log('Question one was answered incorrectly');
@@ -110,7 +110,7 @@ if (username !== null) {
   alert('Now for a different kind of game...');
 
   do {
-    var guessedNum = Number(prompt('Guess a number between 1 and 10'));
+    var guessedNum = Number(prompt('Guess a number between 1 and 10! You are on attempt ' + (numTries + 1) + '/4.'));
     console.log('User guessed: ' + guessedNum);
     numTries ++;
     if (guessedNum < numToGuess) {
@@ -121,8 +121,8 @@ if (username !== null) {
       console.log('Too High');
     } else {
       alert(numToGuess + '! You got it ' + username + '!');
-      score ++;
       console.log('Question six was answered correctly');
+      score ++;
       break;
     }
     if (numTries === 4) {
@@ -148,8 +148,8 @@ if (username !== null) {
       if (arrayOfStates[i].toUpperCase() === guessedState.toUpperCase()) {
         stateInArray = true;
         alert('Nice work, ' + username + '! I have lived in ' + arrayOfStates);
-        score ++;
         console.log('Question seven was answered correctly');
+        score ++;
         break;
       }
     }

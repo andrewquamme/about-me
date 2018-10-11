@@ -5,20 +5,23 @@ alert('Welcome! Let\'s play a little guessing game so you can learn more about m
 // Get user's name and greet them
 
 var username = prompt('My name is Andrew, what\'s yours?');
+
+/* This entire game is enclosed in a loop to allow for a user to 
+cancel the prompt games upon initial page load */
 if (username !== null) {
   console.log('Username is: ' + username);
   alert('Hi ' + username + '! Let\'s get started!');
 
   /* Question One
-  Q: Did I grow up in Washington?
-  A: No (I grew up in Wisconsin) */
-  var answerOne = prompt('Did I grow up in Washington?').toUpperCase();
+  Q: Was I born in a barn?
+  A: No (I was born in a hospital) */
+  var answerOne = prompt('Was I born in a barn?').toUpperCase();
   console.log(answerOne);
   if (answerOne === 'YES' || answerOne === 'Y') {
-    alert('Nope! While I have lived here since 2002, I was born and raised in Wisconsin! Go Pack Go!');
+    alert('Nope! While I did grow up on a farm, I was in fact born in a hospital.');
     console.log('Question one was answered incorrecty');
   } else {
-    alert('Correct! I was born and raised in Wisconsin! Go Pack Go!');
+    alert('Correct!');
     console.log('Question one was answered correctly');
   }
 
@@ -109,7 +112,7 @@ if (username !== null) {
   Guess which other states I've lived in */
 
   alert('I have lived in a few different states besides Washington. See if you can guess another state I\'ve lived in!')
-  var listOfStates = ['Wisconsin', 'South Carolina', 'Georgia'];
+  var arrayOfStates = ['Wisconsin', 'South Carolina', 'Georgia'];
   var stateInArray = false;
   var triesRemaining = 6;
 
@@ -118,11 +121,11 @@ if (username !== null) {
     var guessedState = prompt('Enter a state. You have ' + triesRemaining + ' tries remaining.');
     console.log(guessedState);
 
-    for (var i = 0; i < listOfStates.length; i++) {
+    for (var i = 0; i < arrayOfStates.length; i++) {
 
-      if (listOfStates[i].toUpperCase() === guessedState.toUpperCase()) {
+      if (arrayOfStates[i].toUpperCase() === guessedState.toUpperCase()) {
         stateInArray = true;
-        alert('Nice work! I have lived in ' + listOfStates);
+        alert('Nice work! I have lived in ' + arrayOfStates);
         break;
       }
     }
@@ -136,4 +139,3 @@ if (username !== null) {
   } while (!stateInArray && triesRemaining > 0);
 
 }
-

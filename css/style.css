@@ -29,13 +29,15 @@ p {
 }
 
 h1 {
-  font-family: serif;
-  font-size: 250%;
+  font-family: ;
+  font-size: 40px;
 }
 
 h2 {
+  width: auto;
   font-family: serif;
   font-size: 150%;
+  border-bottom: 2px solid black;
 }
 
 ul {
@@ -47,5 +49,5 @@ li {
 }
 
 ol {
-  list-style-type: upper-roman;
+  list-style-type: decimal;
 }

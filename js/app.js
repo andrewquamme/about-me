@@ -1,44 +1,26 @@
 'use strict'
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function questionOne() {
+  /* Question One
+  ++++++++++++++++++++
+  Q: Was I born in a barn?
+  A: No (I was born in a hospital) */
 
-// Greet the unknown user and ask for their name
-
-alert('Welcome! Let\'s play a little guessing game so you can learn more about me.');
-var username = prompt('My name is Andrew, what\'s yours?');
-console.log('Username is: ' + username);
-
-/* This entire game is enclosed in a loop to allow for
-a user to cancel the prompt games  */
-
-if (username !== null) {
-
-  /*User did not hit cancel, so let the games begin!
-  Initialize score keeping and greet user by name*/
- 
-  var score = 0;
-  alert('Hi ' + username + '! Let\'s get started! First, a few Y/N questions.');
-
-  function questionOne() {
-      /* Question One
-    ====================
-    Q: Was I born in a barn?
-    A: No (I was born in a hospital) */
-
-    var answerOne = prompt('Was I born in a barn?').toUpperCase();
-    console.log(answerOne);
-    if (answerOne === 'YES' || answerOne === 'Y') {
-      console.log('Question one was answered incorrecty');
-    } else {
-      alert('Correct!');
-      console.log('Question one was answered correctly');
-      score++;
-      alert('Nope! While I did grow up on a farm, I was in fact born in a hospital.');
-    }
+  var answerOne = prompt('Was I born in a barn?').toUpperCase();
+  console.log(answerOne);
+  if (answerOne === 'YES' || answerOne === 'Y') {
+    console.log('Question one was answered incorrecty');
+  } else {
+    alert('Correct!');
+    console.log('Question one was answered correctly');
+    score++;
+    alert('Nope! While I did grow up on a farm, I was in fact born in a hospital.');
   }
-questionOne();  
+}
 
 function questionTwo() {
   /* Question Two
-  ====================
+  ++++++++++++++++++++
   Q: Was I in the military?
   A: Yes (I enlisted into the Army) */
 
@@ -53,11 +35,10 @@ function questionTwo() {
     console.log('Question two was answered incorrectly');
   }
 }
-questionTwo();
 
 function questionThree() {
   /* Question Three
-  ====================
+  ++++++++++++++++++++
   Q: Have I been to Iraq?
   A: Yes (2004-2005 and 2005-2006) */
 
@@ -72,11 +53,10 @@ function questionThree() {
     console.log('Question three was answered incorrectly');
   }
 }
-questionThree();
 
 function questionFour() {
-   /* Question Four
-  ====================
+  /* Question Four
+  ++++++++++++++++++++
   Q: Is my favorite food chopped liver?
   A: NO.*/
 
@@ -91,11 +71,10 @@ function questionFour() {
     score++;
   }
 }
-questionFour();
- 
+
 function questionFive() {
-   /* Question Five
-  ====================
+  /* Question Five
+  ++++++++++++++++++++
   Q: Have I cycled from Seattle to Portland?
   A: Yes, twice for some reason */
 
@@ -110,11 +89,10 @@ function questionFive() {
     console.log('Question one was answered incorrectly');
   }
 }
-questionFive();
 
 function questionSix() { 
-   /* Question Six
-  ====================
+  /* Question Six
+  ++++++++++++++++++++
   Random number guessing game
   Script chooses a number between 1 and 10 and user gets 4 attempts to guess */
 
@@ -145,11 +123,10 @@ function questionSix() {
     }
   } while (guessedNum !== numToGuess && numTries < 4);
 }
-questionSix();
 
 function questionSeven() {
-/* Question 7
-  ====================
+  /* Question 7
+  ++++++++++++++++++++
   Guess which other states I've lived in
   User enters states as a guess and that entry is compared to values in an array */
 
@@ -176,10 +153,34 @@ function questionSeven() {
     }
   } while (!stateInArray && triesRemaining > 0);
 }
-questionSeven();
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Greet the unknown user and ask for their name
+
+alert('Welcome! Let\'s play a little guessing game so you can learn more about me.');
+var username = prompt('My name is Andrew, what\'s yours?');
+console.log('Username is: ' + username);
+
+/* This entire game is enclosed in a loop to allow for
+a user to cancel the prompt games  */
+
+if (username !== null) {
+
+  /*User did not hit cancel, so let the games begin!
+  Initialize score keeping and greet user by name*/
+
+  var score = 0;
+  alert('Hi ' + username + '! Let\'s get started! First, a few Y/N questions.');
+  questionOne();
+  questionTwo();
+  questionThree();
+  questionFour();
+  questionFive();
+  questionSix();
+  questionSeven();
 
   /* Final Score
-  ====================
+  ++++++++++++++++++++
   Let the user know their final score */
 
   console.log('Total score is: ' + score);

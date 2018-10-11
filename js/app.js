@@ -30,7 +30,7 @@ if (username !== null) {
   } else {
     alert('Correct!');
     console.log('Question one was answered correctly');
-    score ++;
+    score++;
   }
 
   /* Question Two
@@ -43,7 +43,7 @@ if (username !== null) {
   if (answerTwo === 'YES' || answerTwo === 'Y') {
     alert('Correct! I operated tactical voice and data networks in the Army for six years.');
     console.log('Question one was answered correcty');
-    score ++;
+    score++;
   } else {
     alert('Incorrect, ' + username + '. I enlisted into the Army in 2000.');
     console.log('Question two was answered incorrectly');
@@ -59,7 +59,7 @@ if (username !== null) {
   if (answerThree === 'YES' || answerThree === 'Y') {
     alert('Nice work! I spent two years over there.');
     console.log('Question one was answered correcty');
-    score ++;
+    score++;
   } else {
     alert('Unfortunately, ' + username + ', I was there for two years (04-05 and again from 05-06).');
     console.log('Question three was answered incorrectly');
@@ -78,7 +78,7 @@ if (username !== null) {
   } else {
     alert('100% correct, ' + username + '. I do not like it at all!');
     console.log('Question four was answered correctly');
-    score ++;
+    score++;
   }
 
   /* Question Five
@@ -91,7 +91,7 @@ if (username !== null) {
   if (answerFive === 'YES' || answerFive === 'Y') {
     alert('Nice job, ' + username + '! Over 200 miles!');
     console.log('Question five was answered correcty');
-    score ++;
+    score++;
   } else {
     alert('Oh ye of little faith ' + username + '! I have! (I even did it again the next year for some reason...)');
     console.log('Question one was answered incorrectly');
@@ -120,7 +120,7 @@ if (username !== null) {
     } else {
       alert(numToGuess + '! You got it ' + username + '!');
       console.log('Question six was answered correctly');
-      score ++;
+      score++;
       break;
     }
     if (numTries === 4) {
@@ -147,15 +147,19 @@ if (username !== null) {
         stateInArray = true;
         alert('Nice work, ' + username + '! I have lived in ' + arrayOfStates);
         console.log('Question seven was answered correctly');
-        score ++;
+        score++;
         break;
       }
     }
     if (!stateInArray) {
       alert('Nope, haven\'t lived there!');
-      triesRemaining --;
+      triesRemaining--;
     }
   } while (!stateInArray && triesRemaining > 0);
+
+  /* Final Score
+  ====================
+  Let the user know their final score */
 
   console.log('Total score is: ' + score);
   if (score === 7) {

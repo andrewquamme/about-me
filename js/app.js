@@ -6,8 +6,9 @@ alert('Welcome! Let\'s play a little guessing game so you can learn more about m
 
 var username = prompt('My name is Andrew, what\'s yours?');
 
-/* This entire game is enclosed in a loop to allow for a user to 
+/* This entire game is enclosed in a loop to allow for a user to
 cancel the prompt games upon initial page load */
+var score = 0;
 if (username !== null) {
   console.log('Username is: ' + username);
   alert('Hi ' + username + '! Let\'s get started!');
@@ -22,6 +23,7 @@ if (username !== null) {
     console.log('Question one was answered incorrecty');
   } else {
     alert('Correct!');
+    score ++;
     console.log('Question one was answered correctly');
   }
 
@@ -32,6 +34,7 @@ if (username !== null) {
   console.log(answerTwo);
   if (answerTwo === 'YES' || answerTwo === 'Y') {
     alert('Correct! I operated tactical voice and data networks in the Army for six years.');
+    score ++;
     console.log('Question one was answered correcty');
   } else {
     alert('Incorrect, ' + username + '. I enlisted into the Army in 2000.');
@@ -45,6 +48,7 @@ if (username !== null) {
   console.log(answerThree);
   if (answerThree === 'YES' || answerThree === 'Y') {
     alert('Nice work! I spent two years over there.');
+    score ++;
     console.log('Question one was answered correcty');
   } else {
     alert('Unfortunately, ' + username + ', I was there for two years (04-05 and again from 05-06).');
@@ -61,6 +65,7 @@ if (username !== null) {
     console.log('Question one was answered incorrecty');
   } else {
     alert('100% correct, ' + username + '. I do not like it at all!');
+    score ++;
     console.log('Question four was answered correctly');
   }
 
@@ -71,6 +76,7 @@ if (username !== null) {
   console.log(answerFive);
   if (answerFive === 'YES' || answerFive === 'Y') {
     alert('Nice job, ' + username + '! Over 200 miles!');
+    score ++;
     console.log('Question five was answered correcty');
   } else {
     alert('Oh ye of little faith ' + username + '! I have! (I even did it again the next year for some reason...)');
@@ -88,7 +94,6 @@ if (username !== null) {
     console.log('User guessed: ' + guessedNum);
 
     numTries ++;
-    console.log('Tries: ' + numTries);
 
     if (guessedNum < numToGuess) {
       alert('Too low!');
@@ -98,12 +103,14 @@ if (username !== null) {
       console.log('Too High');
     } else {
       alert(numToGuess + '! You got it ' + username + '!');
-      console.log('You Got It!');
+      score ++;
+      console.log('Question six was answered correctly');
       break;
     }
 
     if (numTries === 4) {
       alert('Sorry! You\'ve tried too many times :( The number was: ' + numToGuess);
+      console.log('User ran out of tries');
     }
 
   } while (guessedNum !== numToGuess && numTries < 4);
@@ -119,13 +126,15 @@ if (username !== null) {
   do {
 
     var guessedState = prompt('Enter a state. You have ' + triesRemaining + ' tries remaining.');
-    console.log(guessedState);
+    console.log('User entered ' + guessedState);
 
     for (var i = 0; i < arrayOfStates.length; i++) {
 
       if (arrayOfStates[i].toUpperCase() === guessedState.toUpperCase()) {
         stateInArray = true;
         alert('Nice work, ' + username + '! I have lived in ' + arrayOfStates);
+        score ++;
+        console.log('Question seven was answered correctly');
         break;
       }
     }
@@ -133,9 +142,15 @@ if (username !== null) {
     if (!stateInArray) {
       alert('Nope, haven\'t lived there!');
       triesRemaining --;
-      console.log(triesRemaining);
     }
 
   } while (!stateInArray && triesRemaining > 0);
+
+  console.log('Total score is: ' + score);
+  if (score === 7) {
+    alert('Awesome job, ' + username + '!!! You got 7/7!!!')
+  } else {
+    alert('Better luck next time, ' + username + '. You got ' + score + '/7 correct.');
+  }
 
 }

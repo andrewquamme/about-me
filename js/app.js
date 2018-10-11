@@ -12,14 +12,18 @@ alert('Welcome! Let\'s play a little guessing game so you can learn more about m
 var username = prompt('My name is Andrew, what\'s yours?');
 
 // Initialize score keeping and quit if user has hit cancel
+
 var score = 0;
+
 if (username !== null) {
   console.log('Username is: ' + username);
   alert('Hi ' + username + '! Let\'s get started!');
 
   /* Question One
+
   Q: Was I born in a barn?
   A: No (I was born in a hospital) */
+
   var answerOne = prompt('Was I born in a barn?').toUpperCase();
   console.log(answerOne);
   if (answerOne === 'YES' || answerOne === 'Y') {
@@ -32,8 +36,10 @@ if (username !== null) {
   }
 
   /* Question Two
+
   Q: Was I in the military?
   A: Yes (I enlisted into the Army) */
+
   var answerTwo = prompt('Was I in the military?').toUpperCase();
   console.log(answerTwo);
   if (answerTwo === 'YES' || answerTwo === 'Y') {
@@ -46,8 +52,10 @@ if (username !== null) {
   }
 
   /* Question Three
+
   Q: Have I been to Iraq?
   A: Yes (2004-2005 and 2005-2006) */
+
   var answerThree = prompt('Have I been to Iraq?').toUpperCase();
   console.log(answerThree);
   if (answerThree === 'YES' || answerThree === 'Y') {
@@ -60,8 +68,10 @@ if (username !== null) {
   }
 
   /* Question Four
+
   Q: Is my favorite food chopped liver?
   A: NO.*/
+
   var answerFour = prompt('Is my favorite food chopper liver?').toUpperCase();
   console.log(answerFour);
   if (answerFour === 'YES' || answerFour === 'Y') {
@@ -74,8 +84,10 @@ if (username !== null) {
   }
 
   /* Question Five
+
   Q: Have I cycled from Seattle to Portland?
   A: Yes, twice for some reason */
+
   var answerFive = prompt('Have I cycled from Seattle to Portland?').toUpperCase();
   console.log(answerFive);
   if (answerFive === 'YES' || answerFive === 'Y') {
@@ -88,20 +100,19 @@ if (username !== null) {
   }
 
   /* Question Six
+
   Random number guessing game
   Script chooses a number between 1 and 10 and user gets 4 attempts to guess */
+
   var numToGuess = Math.floor(Math.random() * 10) + 1;
   console.log('Number to guess: ' + numToGuess);
   var numTries = 0;
-
   alert('Now for a different kind of game...');
 
   do {
     var guessedNum = Number(prompt('Guess a number between 1 and 10'));
     console.log('User guessed: ' + guessedNum);
-
     numTries ++;
-
     if (guessedNum < numToGuess) {
       alert('Too low!');
       console.log('Too Low');
@@ -114,16 +125,15 @@ if (username !== null) {
       console.log('Question six was answered correctly');
       break;
     }
-
     if (numTries === 4) {
       alert('Sorry! You\'ve tried too many times :( The number was: ' + numToGuess);
       console.log('User ran out of tries');
     }
-
   } while (guessedNum !== numToGuess && numTries < 4);
 
   /* Question 7
-  Guess which other states I've lived in 
+
+  Guess which other states I've lived in
   User enters states as a guess and that entry is compared to values in an array */
 
   alert('I have lived in a few different states besides Washington. See if you can guess another state I\'ve lived in!')
@@ -132,12 +142,9 @@ if (username !== null) {
   var triesRemaining = 6;
 
   do {
-
     var guessedState = prompt('Enter a state. You have ' + triesRemaining + ' tries remaining.');
     console.log('User entered ' + guessedState);
-
     for (var i = 0; i < arrayOfStates.length; i++) {
-
       if (arrayOfStates[i].toUpperCase() === guessedState.toUpperCase()) {
         stateInArray = true;
         alert('Nice work, ' + username + '! I have lived in ' + arrayOfStates);
@@ -146,12 +153,10 @@ if (username !== null) {
         break;
       }
     }
-
     if (!stateInArray) {
       alert('Nope, haven\'t lived there!');
       triesRemaining --;
     }
-
   } while (!stateInArray && triesRemaining > 0);
 
   console.log('Total score is: ' + score);
@@ -160,5 +165,4 @@ if (username !== null) {
   } else {
     alert('Better luck next time, ' + username + '. You got ' + score + '/7 correct.');
   }
-
 }

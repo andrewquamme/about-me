@@ -177,6 +177,7 @@ if (username !== null) {
 
   var score = 0;
   alert('Hi ' + username + '! Let\'s get started! First, a few Y/N questions.');
+
   questionOne();
   questionTwo();
   questionThree();

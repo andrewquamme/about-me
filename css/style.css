@@ -1,7 +1,7 @@
 body {
   background: rgb(146, 142, 142);  
   padding: 20px;
-  width: 800px;
+  width: 900px;
 }
 
 #page {
@@ -38,6 +38,12 @@ h2 {
   font-family: serif;
   font-size: 150%;
   border-bottom: 2px solid black;
+}
+
+h3 {
+  padding: 5px;
+  font-family: serif;
+  font-size: 110%;
 }
 
 ul {

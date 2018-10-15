@@ -150,7 +150,7 @@ function questionSeven() {
       }
     }
     if (!stateInArray) {
-      alert('Nope, haven\'t lived there!');
+      alert(`Nope, I haven't lived in ${guessedState} (yet).`);
       triesRemaining--;
       if (triesRemaining === 0) {
         alert('Sorry ' + username + ', you ran out of tries. I have lived in ' + arrayOfStates + '.');
